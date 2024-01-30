@@ -1,0 +1,118 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+	integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+	crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+	integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+	crossorigin="anonymous"></script>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+/* Add more styling to the form */
+form {
+	max-width: 400px;
+	margin: 35px 0px 10px 35%;
+	padding: 20px;
+	border: 1px solid #3498db;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	background-color: #f4f4f4;
+}
+
+/* Style the form labels */
+label {
+	display: block;
+	margin-bottom: 8px;
+	font-weight: bold;
+	color: #2c3e50;
+}
+
+/* Style the form inputs */
+input {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 15px;
+	box-sizing: border-box;
+	border: 1px solid #3498db;
+	border-radius: 4px;
+}
+
+/* Style the checkbox */
+.form-check-input {
+	margin-right: 5px;
+}
+
+/* Add animation to the submit button */
+button {
+	width: 100%;
+	background-color: #3498db;
+	color: white;
+	padding: 12px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+button:hover {
+	background-color: #2980b9;
+}
+</style>
+
+
+</head>
+<body>
+	<form action="/student/update" method="post">
+		<input name="id" value="${student.id}" type="hidden">
+		<div class="mb-3">
+			<label for="exampleInputEmail1" class="form-label">Name : </label> <input
+				type="text" class="form-control" id="exampleInputEmail1" name="name"
+				aria-describedby="emailHelp" value="${student.name}">
+		</div>
+		<div class="mb-3">
+			<label for="exampleInputPassword1" class="form-label">Email :
+			</label> <input type="text" class="form-control" id="exampleInputPassword1"
+				name="email" value="${student.email}">
+		</div>
+		<div class="mb-3">
+			<label for="exampleInputEmail1" class="form-label">Phone : </label> <input
+				type="text" class="form-control" id="exampleInputEmail1"
+				name="phone" value="${student.phoneno}">
+		</div>
+		<div class="mb-3">
+			<label for="exampleInputEmail1" class="form-label">Department
+				: </label> <input type="text" class="form-control" id="exampleInputEmail1"
+				name="position" value="${student.department}">
+		</div>
+
+		<div class="mb-3">
+			<label for="exampleInputEmail1" class="form-label">city : </label> <input
+				type="text" class="form-control" id="exampleInputEmail1"
+				name="position" value="${student.city}">
+		</div>
+		<div class="mb-3">
+			<label for="exampleInputEmail1" class="form-label">State : </label> <input
+				type="text" class="form-control" id="exampleInputEmail1"
+				name="position" value="${student.state}">
+		</div>
+		<div class="mb-3">
+			<label for="exampleInputEmail1" class="form-label">College
+				Name: </label> <input type="text" class="form-control"
+				id="exampleInputEmail1" name="position"
+				value="${student.college_name}">
+		</div>
+
+
+		<button type="submit" class="btn btn-primary">Save</button>
+	</form>
+</body>
+</html>

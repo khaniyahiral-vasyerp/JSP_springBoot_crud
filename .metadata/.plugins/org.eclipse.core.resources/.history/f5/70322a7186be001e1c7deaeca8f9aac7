@@ -1,0 +1,30 @@
+package com.example.demo.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import com.example.demo.dto.UserDto;
+import com.example.demo.service.UserService;
+
+import ch.qos.logback.core.model.Model;
+
+@Controller
+public class UserController {
+	@Autowired
+	private UserService userservice;
+
+	@GetMapping("/registration")
+	public String getRegistrationPage() {
+		return "register";
+	}
+
+	@PostMapping("/registration")
+	public String saveUser(@ModelAttribute("user") UserDto userdto, Model model) {
+		userservice.save(userdto);
+		model.addText("message : Registration sucusse fulluy");
+		return "register";
+	}
+}

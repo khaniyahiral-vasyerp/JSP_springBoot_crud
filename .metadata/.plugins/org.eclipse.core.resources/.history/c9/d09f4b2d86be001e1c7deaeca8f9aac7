@@ -1,0 +1,18 @@
+spring.datasource.url=jdbc:postgresql://localhost:5432/postgres
+spring.datasource.username=postgres
+spring.datasource.password=postgres
+
+
+
+# Thymeleaf Template Configuration
+spring.thymeleaf.prefix=classpath:/templates/
+spring.thymeleaf.suffix=.html
+spring.thymeleaf.cache=false
+
+# Spring JPA Configuration
+spring.jpa.show-sql=true
+spring.jpa.hibernate.ddl-auto=update
+
+# Application Configuration
+server.port=8080
+
